@@ -1,0 +1,6 @@
+*.gguf
+model/
+.venv/
+__pycache__/
+*.pyc
+submission.json
