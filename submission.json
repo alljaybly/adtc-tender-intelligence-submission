@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.1.0",
+  "profiler_version": "adtc-profiler 0.1.0",
+  "submission": {
+    "team_id": "tendergpt-edge",
+    "domain": "corporate_enterprise",
+    "language_scope": [
+      "en"
+    ],
+    "african_alpha_claim": false,
+    "budget_laptop_claim": true,
+    "submitter": {
+      "name": "Allan Blythe",
+      "email": "allanjblythe@gmail.com",
+      "github_handle": "alljaybly"
+    },
+    "cross_disciplinary_pairing": {
+      "discipline": "procurement",
+      "load_bearing": true,
+      "description": "Offline AI and document intelligence applied to procurement and tender analysis for African contractors and enterprises."
+    },
+    "test_prompts": [
+      {
+        "prompt_id": "tp_001",
+        "prompt": "What are the key eligibility, submission, and compliance requirements a contractor must satisfy before submitting a bid for this tender? Cite the relevant evidence from the document."
+      },
+      {
+        "prompt_id": "tp_002",
+        "prompt": "What are the most important commercial and operational risks a contractor should consider before deciding whether to bid on this tender? Use evidence from the document to support your assessment."
+      }
+    ],
+    "model": {
+      "name": "Qwen2.5-1.5B-Instruct-Q4_K_M",
+      "runtime": "llama.cpp",
+      "quantization": "GGUF Q4_K_M",
+      "parameters_estimate": "1.8B",
+      "packaging": "binary_bundle"
+    }
+  },
+  "environment": {
+    "measured_on": "participant_laptop",
+    "cpu_model": "Intel(R) Core(TM) i3-5005U CPU @ 2.00GHz",
+    "ram_gb": 2.8,
+    "gpu": "none",
+    "os": "Ubuntu 24.04.4 LTS"
+  },
+  "throughput": {
+    "tokens_per_second_generation": 8.7,
+    "first_token_latency_ms": 24979.23,
+    "prompt_tokens": 512,
+    "generated_tokens": 128
+  },
+  "memory": {
+    "peak_rss_mb": 1822.62,
+    "steady_state_rss_mb": 1731.68,
+    "peak_vms_mb": 2283.39
+  },
+  "accuracy": [
+    {
+      "benchmark": "arc_easy",
+      "dataset_version": "lm-eval-harness",
+      "language": "en",
+      "samples": 50,
+      "score": 0.74,
+      "metric": "acc_norm"
+    }
+  ],
+  "cpu_thermal": {
+    "cpu_percent_p99": 51.5,
+    "core_temp_c_peak": null,
+    "throttled": false
+  },
+  "reproducibility": {
+    "git_commit_sha": "000000000000",
+    "docker_image_digest": "unknown",
+    "random_seed": 42
+  },
+  "model_info": {
+    "params_count": 1777088000,
+    "context_length": 32768,
+    "architecture": "qwen2",
+    "claimed_params_estimate": "1.8B",
+    "params_match": true
+  }
+}
